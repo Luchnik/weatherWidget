@@ -1,0 +1,70 @@
+* {
+  padding: 0; margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #3f51b5;
+}
+
+#page {
+  width: 650px;
+  margin: 113px auto 0 auto;
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.weather {
+  outline: 1px solid #fff;
+  margin: 30px 0 30px 0;
+}
+
+input[type="text"] {
+  padding: 15px;
+  color: #fff;
+  border: solid 2px #fff;
+  background-color: #3f51b5;
+  font-size: 18px;
+  width: 538px;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+  border: none;
+  color: #3f51b5;
+  width: 77px;
+  padding: 19.5px 0;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  bottom: 1px;
+  margin-left: -4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  text-decoration: underline;
+}
+
+input[type="reset"] {
+  background-color: #fff;
+  border: none;
+  color: #3f51b5;
+  width: 65px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+input[type="reset"]:hover {
+  text-decoration: underline;
+}
