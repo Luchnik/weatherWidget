@@ -1,0 +1,21 @@
+.update {
+  color: #ffffff;
+  margin-top: 45px;
+  margin-bottom: 85px;
+}
+
+.element {
+  margin-bottom: 5px;
+}
+
+.element .listItem {
+  font-weight: bold;
+}
+
+.element .cityName {
+  font-size: 24px;
+}
+
+.element .country, .element .temp {
+  font-size: 18px;
+}
