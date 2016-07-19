@@ -3,6 +3,7 @@ $(function() {
   var apiCall = 'http://api.openweathermap.org/data/2.5/weather?q=';
   var units = '&units=metric';
   var appId = '&appid=6946b019de6496e854c48733148457d4';
+  var update = $('.update');
 
   // Submit button event.
   $('input[type="submit"]').click(function() {
@@ -11,7 +12,7 @@ $(function() {
 
   // Reset button event.
   $('input[type="reset"]').click(function() {
-    $('.update').empty();
+    update.empty();
   });
 
   getData = function() {
@@ -19,11 +20,11 @@ $(function() {
       .done(function(response) {
 
         if (!(response.sys || response.main || response.weather)) {
-          $('.update').append('<li class="element"><span class="listItem">- </span><span class="description">Invalid input!</span></li>');
+          update.append('<li class="element"><span class="listItem">- </span><span class="description">Invalid input!</span></li>');
           return;
         }
 
-        $('.update').append('<li class="element"> <span class="listItem">- </span>' + '<span class="cityName">' + response.name + ', </span>'
+        update.append('<li class="element"> <span class="listItem">- </span>' + '<span class="cityName">' + response.name + ', </span>'
           + '<span class="country">' + response.sys.country + ': </span>'
           + '<span class="temp">' + response.main.temp + '&deg;C, </span>'
           + '<span class="description">' + response.weather[0].description + '</span> </li>');
