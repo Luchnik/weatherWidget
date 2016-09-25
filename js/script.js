@@ -4,6 +4,7 @@ $(function() {
   var units = '&units=metric';
   var appId = '&appid=6946b019de6496e854c48733148457d4';
   var update = $('.update');
+  var input = $('#cityName');
 
   // Submit button event.
   $('input[type="submit"]').click(function() {
@@ -28,6 +29,8 @@ $(function() {
           + '<span class="country">' + response.sys.country + ': </span>'
           + '<span class="temp">' + response.main.temp + '&deg;C, </span>'
           + '<span class="description">' + response.weather[0].description + '</span> </li>');
+      
+        input.val('');
       })
       .fail(function(jqXHR, textStatus, errorThrown) {
         console.log(textStatus);
